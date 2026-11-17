@@ -1,0 +1,378 @@
+@import './variables.css';
+
+/* ==========================================================================
+   AUTHENTICATION PAGES (LOGIN & REGISTER) - STITCH DESIGN SYSTEM
+   ========================================================================== */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.25rem;
+  background-color: var(--color-bg);
+  background-image: radial-gradient(var(--color-border) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 490px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Floating Neo-Brutalist Badges / Stickers */
+.auth-sticker {
+  position: absolute;
+  z-index: 20;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: var(--border-solid-sm);
+  border-radius: var(--radius-md);
+  box-shadow: 3px 3px 0px var(--color-border);
+  user-select: none;
+  pointer-events: none;
+  transition: transform var(--transition-fast);
+}
+
+.auth-sticker--top-left {
+  top: -18px;
+  left: -14px;
+  transform: rotate(-6deg);
+  background-color: var(--color-coral);
+  color: var(--color-text);
+}
+
+.auth-sticker--bottom-right {
+  bottom: -14px;
+  right: -14px;
+  transform: rotate(4deg);
+  background-color: var(--color-purple);
+  color: var(--color-text);
+}
+
+.auth-sticker--top-right {
+  top: -16px;
+  right: -12px;
+  transform: rotate(5deg);
+  background-color: var(--color-yellow);
+  color: var(--color-text);
+}
+
+.auth-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.auth-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: var(--border-solid-sm);
+  border-radius: var(--radius-full);
+  box-shadow: 2px 2px 0px var(--color-border);
+}
+
+.auth-badge-pill--lime {
+  background-color: var(--color-lime);
+}
+
+.auth-badge-pill--yellow {
+  background-color: var(--color-yellow);
+}
+
+.auth-card {
+  background-color: var(--color-white);
+  border: var(--border-solid-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.auth-card__content {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.auth-card__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.auth-card__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.auth-card__subtitle {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-muted);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+/* Password Strength Meter in Register */
+.auth-strength-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: -0.25rem;
+}
+
+.auth-strength-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+}
+
+.auth-strength-bars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.auth-strength-bar {
+  height: 6px;
+  background-color: var(--color-light-gray);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.auth-strength-bar--weak {
+  background-color: var(--color-coral);
+}
+
+.auth-strength-bar--medium {
+  background-color: var(--color-yellow);
+}
+
+.auth-strength-bar--strong {
+  background-color: var(--color-lime);
+}
+
+/* Checkbox Row */
+.auth-checkbox-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 0.25rem;
+}
+
+.auth-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+}
+
+.auth-custom-checkbox {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border: var(--border-solid-sm);
+  border-radius: 4px;
+  background-color: var(--color-white);
+  box-shadow: 2px 2px 0px var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.auth-custom-checkbox--checked {
+  background-color: var(--color-lime);
+}
+
+.auth-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.15rem 0.5rem;
+  background-color: var(--color-light-gray);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.auth-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-success);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+/* Social Login / Divider */
+.auth-divider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.auth-divider__line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-border);
+}
+
+.auth-divider__text {
+  position: absolute;
+  background-color: var(--color-white);
+  padding: 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text);
+}
+
+.auth-social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.auth-form__demo-box {
+  padding: 0.75rem 1rem;
+  background-color: var(--color-light-gray);
+  border: var(--border-solid-sm);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.auth-form__demo-text {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.auth-footer {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  margin-top: 0.25rem;
+}
+
+.auth-footer__link {
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-black);
+  color: var(--color-text);
+  text-decoration: underline;
+  text-decoration-thickness: 2.5px;
+  text-underline-offset: 3px;
+  margin-left: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.auth-footer__link:hover {
+  background-color: var(--color-yellow);
+}
+
+/* Neo-Brutalism Logo component styles */
+.neo-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  user-select: none;
+}
+
+.neo-logo__icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-yellow);
+  border: var(--border-solid);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 0.45rem;
+}
+
+.neo-logo__icon {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2.5;
+  color: var(--color-border);
+}
+
+.neo-logo__text {
+  font-family: var(--font-display);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-black);
+  letter-spacing: -0.04em;
+  color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+  .auth-sticker {
+    display: none;
+  }
+  .auth-card__content {
+    padding: 1.5rem 1.25rem;
+  }
+}

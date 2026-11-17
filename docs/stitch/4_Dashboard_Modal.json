@@ -1,0 +1,39 @@
+{
+  "id": 4,
+  "jsonrpc": "2.0",
+  "result": {
+    "_meta": {
+      "ui": {
+        "resourceUri": "ui://stitch.googleapis.com/project-viewer",
+        "visibility": [
+          "model",
+          "app"
+        ]
+      }
+    },
+    "content": [
+      {
+        "text": "{\"name\":\"projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee\",\"title\":\"TASKLY - Dashboard with Add/Edit Modal\",\"screenshot\":{\"name\":\"projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee/fileEntries/screenshot\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/2294595726339364603/files/screenshot_000660756c6915f0028f09bbfc20b057:download\",\"mimeType\":\"image/png\"},\"htmlCode\":{\"name\":\"projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee/fileEntries/html\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/2294595726339364603/files/2581cff706574da9973c57e30a6456ee:download\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"2218\",\"deviceType\":\"DESKTOP\",\"screenType\":\"DESIGN\"}",
+        "type": "text"
+      }
+    ],
+    "structuredContent": {
+      "deviceType": "DESKTOP",
+      "height": "2218",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/2294595726339364603/files/2581cff706574da9973c57e30a6456ee:download",
+        "mimeType": "text/html",
+        "name": "projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee/fileEntries/html"
+      },
+      "name": "projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee",
+      "screenType": "DESIGN",
+      "screenshot": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/2294595726339364603/files/screenshot_000660756c6915f0028f09bbfc20b057:download",
+        "mimeType": "image/png",
+        "name": "projects/2294595726339364603/screens/2581cff706574da9973c57e30a6456ee/fileEntries/screenshot"
+      },
+      "title": "TASKLY - Dashboard with Add/Edit Modal",
+      "width": "2560"
+    }
+  }
+}

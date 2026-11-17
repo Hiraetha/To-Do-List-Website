@@ -1,0 +1,490 @@
+@import './variables.css';
+
+/* ==========================================================================
+   NEO-BRUTALISM BUTTONS
+   ========================================================================== */
+
+.neo-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border: var(--border-solid);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  color: var(--color-text);
+  background-color: var(--color-card-bg);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+  user-select: none;
+  white-space: nowrap;
+}
+
+.neo-btn:hover:not(:disabled) {
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 6px 6px 0px var(--color-border);
+}
+
+.neo-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.neo-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+/* Button Variants */
+.neo-btn--primary {
+  background-color: var(--color-yellow);
+}
+.neo-btn--primary:hover:not(:disabled) {
+  background-color: #ffd633;
+}
+
+.neo-btn--secondary {
+  background-color: var(--color-lime);
+}
+.neo-btn--secondary:hover:not(:disabled) {
+  background-color: #a8ee75;
+}
+
+.neo-btn--accent {
+  background-color: var(--color-purple);
+  color: var(--color-text);
+}
+.neo-btn--accent:hover:not(:disabled) {
+  background-color: #d6c4ff;
+}
+
+.neo-btn--danger {
+  background-color: var(--color-coral);
+  color: var(--color-text);
+}
+.neo-btn--danger:hover:not(:disabled) {
+  background-color: #ff7568;
+}
+
+.neo-btn--outline {
+  background-color: var(--color-white);
+}
+.neo-btn--outline:hover:not(:disabled) {
+  background-color: var(--color-light-gray);
+}
+
+.neo-btn--ghost {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+.neo-btn--ghost:hover:not(:disabled) {
+  background-color: rgba(0, 0, 0, 0.06);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+  transform: none;
+}
+
+/* Button Sizes */
+.neo-btn--sm {
+  padding: 0.35rem 0.75rem;
+  font-size: var(--font-size-xs);
+  border-width: var(--border-width-sm);
+  box-shadow: var(--shadow-sm);
+}
+.neo-btn--sm:hover:not(:disabled) {
+  box-shadow: 3px 3px 0px var(--color-border);
+}
+
+.neo-btn--md {
+  padding: 0.65rem 1.35rem;
+  font-size: var(--font-size-sm);
+}
+
+.neo-btn--lg {
+  padding: 0.85rem 1.75rem;
+  font-size: var(--font-size-base);
+  border-width: var(--border-width-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.neo-btn--full {
+  width: 100%;
+}
+
+.neo-btn__spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.neo-btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   NEO-BRUTALISM INPUTS & FORM CONTROLS
+   ========================================================================== */
+
+.neo-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.neo-input-label {
+  font-family: var(--font-display);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.neo-input-required {
+  color: var(--color-danger);
+  font-weight: var(--font-weight-black);
+}
+
+.neo-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.neo-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: var(--border-solid);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  outline: none;
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.neo-input:focus {
+  box-shadow: 4px 4px 0px var(--color-border);
+  border-color: var(--color-border);
+}
+
+.neo-input::placeholder {
+  color: #8c897f;
+  font-weight: var(--font-weight-normal);
+}
+
+.neo-input:disabled {
+  background-color: var(--color-light-gray);
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.neo-textarea {
+  resize: vertical;
+  min-height: 85px;
+  line-height: 1.5;
+}
+
+.neo-input--has-left-icon {
+  padding-left: 2.6rem;
+}
+
+.neo-input--has-right-icon {
+  padding-right: 2.85rem;
+}
+
+.neo-input-icon--left {
+  position: absolute;
+  left: 0.85rem;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.neo-input-password-toggle {
+  position: absolute;
+  right: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  border: 1.5px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.neo-input-password-toggle:hover {
+  background-color: var(--color-yellow);
+  border-color: var(--color-border);
+}
+
+.neo-input-error {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-danger);
+  margin-top: 0.15rem;
+}
+
+.neo-input-group--error .neo-input {
+  border-color: var(--color-danger);
+  background-color: #fff8f8;
+}
+
+.neo-input-helper {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   NEO-BRUTALISM MODAL (MATCHING STITCH DESIGN)
+   ========================================================================== */
+
+.neo-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(28, 27, 27, 0.65);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  z-index: var(--z-modal-backdrop);
+  animation: fadeIn 0.15s ease-out;
+}
+
+.neo-modal {
+  width: 100%;
+  background-color: var(--color-white);
+  border: var(--border-solid-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: var(--z-modal);
+  animation: slideUp 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Stitch Style Dark Header with Yellow Glow */
+.neo-modal__header {
+  padding: 1rem 1.35rem;
+  background-color: var(--color-border);
+  color: var(--color-white);
+  border-bottom: var(--border-solid);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.neo-modal__title {
+  font-family: var(--font-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-black);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-yellow);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.neo-modal__subtitle {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-normal);
+  color: #ECEBE4;
+  opacity: 0.85;
+}
+
+.neo-modal__close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-yellow);
+  border: var(--border-solid-sm);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
+  font-weight: var(--font-weight-black);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.neo-modal__close-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px var(--color-white);
+  background-color: var(--color-coral);
+}
+
+.neo-modal__body {
+  padding: 1.5rem;
+  overflow-y: auto;
+  max-height: calc(85vh - 130px);
+}
+
+.neo-modal__footer {
+  padding: 1rem 1.5rem;
+  background-color: var(--color-bg);
+  border-top: var(--border-solid);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(16px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+/* ==========================================================================
+   CONFIRM DIALOG
+   ========================================================================== */
+
+.neo-confirm-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.neo-confirm-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-coral);
+  border: var(--border-solid);
+  box-shadow: var(--shadow-sm);
+}
+
+.neo-confirm-message {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.neo-confirm-actions {
+  display: flex;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/* ==========================================================================
+   NEO-BRUTALISM TOAST NOTIFICATIONS
+   ========================================================================== */
+
+.neo-toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  z-index: var(--z-toast);
+  pointer-events: none;
+  max-width: 400px;
+}
+
+.neo-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.15rem;
+  background-color: var(--color-white);
+  border: var(--border-solid);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  font-family: var(--font-display);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-sm);
+  animation: toastSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.neo-toast--success {
+  background-color: var(--color-lime);
+}
+
+.neo-toast--error {
+  background-color: var(--color-coral);
+}
+
+.neo-toast--warning {
+  background-color: var(--color-yellow);
+}
+
+.neo-toast--info {
+  background-color: var(--color-purple);
+}
+
+.neo-toast__icon {
+  display: flex;
+  align-items: center;
+}
+
+.neo-toast__message {
+  flex: 1;
+}
+
+.neo-toast__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.neo-toast__close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: var(--color-border);
+}
+
+@keyframes toastSlideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

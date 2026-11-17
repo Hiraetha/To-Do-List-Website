@@ -1,0 +1,39 @@
+{
+  "id": 3,
+  "jsonrpc": "2.0",
+  "result": {
+    "_meta": {
+      "ui": {
+        "resourceUri": "ui://stitch.googleapis.com/project-viewer",
+        "visibility": [
+          "model",
+          "app"
+        ]
+      }
+    },
+    "content": [
+      {
+        "text": "{\"name\":\"projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7\",\"title\":\"TASKLY - Login\",\"screenshot\":{\"name\":\"projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7/fileEntries/screenshot\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/2294595726339364603/files/screenshot_00066075627a3933077984503b38aff9:download\",\"mimeType\":\"image/png\"},\"htmlCode\":{\"name\":\"projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7/fileEntries/html\",\"downloadUrl\":\"https://stitch.googleapis.com/v1/projects/2294595726339364603/files/7df6e5178c944a2f9e8ccda519de68d7:download\",\"mimeType\":\"text/html\"},\"width\":\"2560\",\"height\":\"2048\",\"deviceType\":\"DESKTOP\",\"screenType\":\"DESIGN\"}",
+        "type": "text"
+      }
+    ],
+    "structuredContent": {
+      "deviceType": "DESKTOP",
+      "height": "2048",
+      "htmlCode": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/2294595726339364603/files/7df6e5178c944a2f9e8ccda519de68d7:download",
+        "mimeType": "text/html",
+        "name": "projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7/fileEntries/html"
+      },
+      "name": "projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7",
+      "screenType": "DESIGN",
+      "screenshot": {
+        "downloadUrl": "https://stitch.googleapis.com/v1/projects/2294595726339364603/files/screenshot_00066075627a3933077984503b38aff9:download",
+        "mimeType": "image/png",
+        "name": "projects/2294595726339364603/screens/7df6e5178c944a2f9e8ccda519de68d7/fileEntries/screenshot"
+      },
+      "title": "TASKLY - Login",
+      "width": "2560"
+    }
+  }
+}

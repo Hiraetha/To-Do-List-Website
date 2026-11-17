@@ -1,0 +1,67 @@
+:root {
+  /* Neo-Brutalism Color Palette */
+  --color-bg: #FCF9F8;
+  --color-surface: #FCF9F8;
+  --color-yellow: #FFDE59;
+  --color-lime: #B8F28B;
+  --color-purple: #E8DDFF;
+  --color-purple-dark: #674BB5;
+  --color-coral: #FF8A80;
+  --color-text: #1C1B1B;
+  --color-text-muted: #555555;
+  --color-border: #1C1B1B;
+  --color-card-bg: #FFFFFF;
+  --color-white: #FFFFFF;
+  --color-light-gray: #ECEBE4;
+  --color-danger: #BA1A1A;
+  --color-danger-bg: #FFDAD6;
+  --color-success: #396A13;
+  --color-success-bg: #B6F089;
+
+  /* Borders & Radii */
+  --border-width: 2.5px;
+  --border-width-sm: 2px;
+  --border-width-lg: 3px;
+  --border-solid: var(--border-width) solid var(--color-border);
+  --border-solid-sm: var(--border-width-sm) solid var(--color-border);
+  --border-solid-lg: var(--border-width-lg) solid var(--color-border);
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Hard Offset Neo-Brutalism Shadows (No blur!) */
+  --shadow-sm: 2px 2px 0px var(--color-border);
+  --shadow-md: 4px 4px 0px var(--color-border);
+  --shadow-lg: 6px 6px 0px var(--color-border);
+  --shadow-xl: 8px 8px 0px var(--color-border);
+  --shadow-hover: 2px 2px 0px var(--color-border);
+  --shadow-active: 0px 0px 0px var(--color-border);
+
+  /* Typography */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-weight-normal: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 800;
+
+  /* Transitions */
+  --transition-fast: 0.12s ease-in-out;
+  --transition-normal: 0.2s ease-in-out;
+
+  /* Z-indices */
+  --z-sidebar: 40;
+  --z-header: 30;
+  --z-modal-backdrop: 50;
+  --z-modal: 51;
+  --z-toast: 100;
+}
